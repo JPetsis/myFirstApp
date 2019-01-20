@@ -16,26 +16,29 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ff9d9d;">
-  <a class="navbar-brand">Bikes Tübingen</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      <a class="navbar-brand">Bikes Tübingen</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <%= link_to(simple_pages_index_path, class: 'nav-link') do %>Home<span class="sr-only"></span>
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to('About', simple_pages_about_path, class: 'nav-link')  %>
-      </li>
-      <li class="nav-item">
-        <%= link_to('Contact', simple_pages_contact_path, class: 'nav-link')  %>
-      </li>
-    </ul>
-  </div>
-</nav>  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to(simple_pages_index_path, class: 'nav-link') do %>Home<span class="sr-only"></span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to('Products', products_path, class: 'nav-link')  %>
+          </li>
+          <li class="nav-item">
+            <%= link_to('About', simple_pages_about_path, class: 'nav-link')  %>
+          </li>
+          <li class="nav-item">
+            <%= link_to('Contact', simple_pages_contact_path, class: 'nav-link')  %>
+          </li>
+        </ul>
+      </div>
+    </nav>  
 
     <%= yield %>
 

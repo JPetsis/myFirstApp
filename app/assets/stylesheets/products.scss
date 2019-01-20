@@ -1,3 +1,21 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$font: Helvetica, sans-serif;
+
+#products {
+  margin-block-end: 50px;
+}
+
+.newProduct {
+  padding: 20px;
+  font: $font;
+}
+
+table {
+  width: 100%;
+  tr {
+    text-align: center;
+    font: $font
+  }
+}
