@@ -64,6 +64,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.5.3)
       concurrent-ruby (~> 1.0)
+    irb (1.0.0)
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -176,6 +177,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   coffee-rails (~> 4.2)
+  irb
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
@@ -194,4 +196,5 @@ DEPENDENCIES
 RUBY VERSION
    ruby 2.6.0p0
 
-
+BUNDLED WITH
+   2.0.1
