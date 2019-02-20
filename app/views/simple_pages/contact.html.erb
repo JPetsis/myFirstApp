@@ -6,8 +6,8 @@
   <div class='row'>
     <%= bootstrap_form_with(url:'/simple_pages/thank_you', method: :post, local: true, class: 'email_form col-lg-6') do |form| %>
       <%= form.text_field :name, placeholder: 'Enter Name' %>
-      <%= form.text_field :email, placeholder: 'Enter Email' %>
-      <%= form.text_area :message, placeholder: 'Enter Message', rows: 5 %>
+      <%= form.email_field :email, placeholder: 'Enter Email', required: true %>
+      <%= form.text_area :message, placeholder: 'Enter Message', rows: 5, required: true %>
       <%= form.submit 'Send'%>
     <% end %>
   </div>
