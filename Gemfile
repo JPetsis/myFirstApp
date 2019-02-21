@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'irb'
 gem 'bootstrap_form', ">= 4.1.0"
 gem 'devise'
+gem 'cancancan', '~> 1.10'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
