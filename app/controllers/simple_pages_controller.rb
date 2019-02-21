@@ -7,13 +7,6 @@ class SimplePagesController < ApplicationController
     @products = Product.limit(3)
   end
 
-  def contact_form(email, name, message)
-  @message = message
-    mail(from: email,
-         to: 'petsisjohn@gmail.com',
-         subject: "A new contact form message from #{name}")
-  end
-
   def thank_you
     @name = params[:name]
     @email = params[:email]
