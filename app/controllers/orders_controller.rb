@@ -1,9 +1,10 @@
 class OrdersController < ApplicationController
 
   before_action :authenticate_user!
+  load_and_authorize_resource
 
   def index
-    @orders = Order.includes(:product).all
+    @orders = Order.includes(:product).where(user_id: current_user.id)
   end
 
   def show
