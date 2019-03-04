@@ -17,10 +17,15 @@
         </p>
         <p>
           <button type="button" class="btn btn-warning btn-lg">Add to Card</button>
+        </p>
+        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
       </div>  
     </div>
     <div class="row">
-        <div class="col-md-offset-1 col-md-10"></div>
+      <div class="col-md-3 reviews">
+        <%= render "new_comment" %>
+        <%= render 'comments' %>
+      </div>
     </div>
 </div>
 
