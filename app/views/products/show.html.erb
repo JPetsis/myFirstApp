@@ -25,6 +25,9 @@
       <div class="col-md-3 reviews">
         <%= render "new_comment" %>
         <%= render 'comments' %>
+        
+        <%= will_paginate @comments %>
+        
       </div>
     </div>
 </div>
