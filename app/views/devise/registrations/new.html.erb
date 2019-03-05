@@ -10,6 +10,8 @@
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
+          <%= f.text_field :first_name, wrapper: { class: 'new_first_name' } %>
+          <%= f.text_field :last_name %>
           <%= f.password_field :password, autocomplete: "new-password" %>
           <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
           <%= f.submit "Sign up" %>
