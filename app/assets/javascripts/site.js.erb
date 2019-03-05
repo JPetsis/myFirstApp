@@ -5,6 +5,7 @@ $(document).on('turbolinks:load', function(){
     starOn: '<%= asset_path 'star-on.png' %>',
     scoreName: 'comment[rating]'
     });
+    $('.rating').raty('reload');
 
   $('.rated').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
@@ -14,5 +15,6 @@ $(document).on('turbolinks:load', function(){
     score: function() {
       return $(this).attr('data-score');
     }
-  });  
+  });
+  $('.rated').raty('reload');
 });

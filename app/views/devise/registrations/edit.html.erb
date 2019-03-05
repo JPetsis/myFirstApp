@@ -12,6 +12,9 @@
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
 
+        <%= f.text_field :first_name %>
+        <%= f.text_field :last_name %>
+
         <%= f.password_field :password, autocomplete: "new-password", wrapper: { class: 'edit_password' } %>
         <% if @minimum_password_length %>
           <em><%= @minimum_password_length %> characters minimum</em>
