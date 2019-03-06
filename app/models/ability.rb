@@ -35,5 +35,6 @@ class Ability
     else
       can :manage, User, id: user.id
       can :manage, Order, user_id: user.id
+    end
   end
 end
