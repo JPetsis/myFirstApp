@@ -78,6 +78,25 @@ body {
   color: #C0C0C0;
 }
 
+.pagination_product {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.pagination_product > * {
+  margin-right: 0.1em;
+  padding: 0.3em 0.4em;
+}
+
+.pagination_product a:active {
+  text-shadow: none;
+}
+
+.pagination_product .disabled {
+  color: #C0C0C0;
+}
+
 
 table {
   width: 100%;

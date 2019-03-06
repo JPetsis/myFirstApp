@@ -6,7 +6,7 @@
   <div class="row">
     <%= render partial: "shared/product", collection: @products %>
   </div>
-  <%= will_paginate @products %>
+  <%= will_paginate @products, :class => 'pagination_product' %>
 </div>
 
 
