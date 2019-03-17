@@ -20,6 +20,7 @@ gem 'bootstrap_form', ">= 4.1.0"
 gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
+gem 'rails-controller-testing'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
