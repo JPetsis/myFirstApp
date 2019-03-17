@@ -34,8 +34,9 @@ class Ability
       can :manage, :all
     else
       can [:show, :edit, :update, :delete], User, id: user.id
-      can :show, Order, user_id: user.id
+      can [:show, :index], Order, user_id: user.id
       can [:show, :index], Product
+      can :create, Comment
     end
   end
 end
