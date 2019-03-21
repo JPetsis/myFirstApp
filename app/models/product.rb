@@ -7,11 +7,7 @@ class Product < ApplicationRecord
   validates :price, presence: true, :numericality => { :greater_than_or_equal_to => 0 }
 
   def self.search(search_term)
-    if Rails.env.production?
-      Product.where("name ILIKE ?", "%#{search_term}%")
-    else
-      Product.where("name LIKE ?", "%#{search_term}%")
-    end
+    Product.where("name LIKE ?", "%#{search_term}%")
   end
 
   def highest_rating_comment
