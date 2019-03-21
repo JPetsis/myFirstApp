@@ -18,8 +18,6 @@ describe UsersController, type: :controller do
         sign_in user1
         get :show, params: { id: user.id }
         expect(response).to have_http_status(302)
-        expect(assigns(:user1)).not_to eq user
-        expect(response).to redirect_to(root_path)
         expect(assigns(:user)).not_to eq user1
         expect(response).to redirect_to(root_path)
       end

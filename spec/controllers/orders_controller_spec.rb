@@ -13,12 +13,13 @@ describe OrdersController, type: :controller do
         sign_in test_user
       end
       it 'try to access his order' do
-        get :show, params: { user_id: test_user.id, id: order1.id }
+        get :show, params: { id: order1.id }
         expect(assigns(:order)).to eq order1
+        expect(response).to render_template('orders/show')
       end
       it 'try to access order that belongs to another user' do
         sign_in test_user1
-        get :show, params: { user_id: test_user.id, id: order1.id }
+        get :show, params: { id: order1.id }
         expect(response).to have_http_status(302)
         expect(assigns(:test_user1)).not_to eq test_user
         expect(response).to redirect_to(root_path)
