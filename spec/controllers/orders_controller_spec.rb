@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe OrdersController, type: :controller do
   # let(:test_user) { User.create!(email: 'user@gmail.com', password: '12345678') }
-  test_user_order = FactoryBot.create(:user)
+  test_user_order = FactoryBot.createJ(:user)
   # let(:test_user1) { User.create!(email: 'user1@gmail.com', password: '123456789') }
   test_user_order1 = FactoryBot.create(:user)
   # let(:product4) { Product.create!(name: 'name_2', description: 'desc_2', colour: 'red', image_url: 'https://picsum.photos/2000', price: 300) }
