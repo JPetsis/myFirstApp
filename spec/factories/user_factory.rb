@@ -16,11 +16,4 @@ FactoryBot.define do
     password { '1234567890' }
     admin { true }
   end
-  factory :product do
-    name
-    description { 'a product' }
-    colour { 'some colour' }
-    price { '100' }
-    image_url { 'https://picsum.photos/1000' }
-  end
 end

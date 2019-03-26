@@ -2,13 +2,15 @@ require 'rails_helper'
 
 describe OrdersController, type: :controller do
   # let(:test_user) { User.create!(email: 'user@gmail.com', password: '12345678') }
-  test_user_order = FactoryBot.createJ(:user)
+  let(:test_user_order) { FactoryBot.create(:user) }
   # let(:test_user1) { User.create!(email: 'user1@gmail.com', password: '123456789') }
-  test_user_order1 = FactoryBot.create(:user)
+  let(:test_user_order1) { FactoryBot.create(:user) }
   # let(:product4) { Product.create!(name: 'name_2', description: 'desc_2', colour: 'red', image_url: 'https://picsum.photos/2000', price: 300) }
-  product2 = FactoryBot.create(:product)
-  let(:order1) { Order.create!(user_id: test_user_order.id, product_id: product2.id) }
-  let(:order2) { Order.create!(user_id: test_user_order1.id, product_id: product2.id) }
+  let(:product2) { FactoryBot.create(:product) }
+  # let(:order1) { Order.create!(user_id: test_user_order.id, product_id: product2.id) }
+  let(:order1) { FactoryBot.create(:order, user: test_user_order, product: product2) }
+  # let(:order2) { Order.create!(user_id: test_user_order1.id, product_id: product2.id) }
+  let(:order2) { FactoryBot.create(:order, user: test_user_order1, product: product2) }
   describe 'GET #show' do
 
     context 'when a user is logged in' do
