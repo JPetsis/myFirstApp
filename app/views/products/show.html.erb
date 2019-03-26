@@ -16,7 +16,9 @@
           <%= @product.description %>
         </p>
         <p>
-          <button type="button" class="btn btn-warning btn-lg">Add to Card</button>
+        <%= form_with(url: '/payments/create') do |form| %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
         </p>
         <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
       </div>  
