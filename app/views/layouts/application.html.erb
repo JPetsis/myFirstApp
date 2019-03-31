@@ -25,6 +25,14 @@
     <p id="alert" class="alert alert-primary"><%= alert %></p>
     <% end %>
 
+    <% if flash[:error] %>
+    <p id="notice" class="alert alert-warning"><%= flash[:error] %></p>
+    <% end %>
+
+    <% if flash[:success] %>
+    <p id="notice" class="alert alert-success"><%= flash[:success] %></p>
+    <% end %>
+
     <%= yield %>
 
     <%= render partial: "shared/footer" %>

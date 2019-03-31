@@ -1,5 +1,4 @@
 class PaymentsController < ApplicationController
-  
   before_action :authenticate_user!
   
   def create
@@ -29,6 +28,6 @@ class PaymentsController < ApplicationController
       err = body[:error]
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
-    redirect_to product_path(@product), notice: "Thank you for your purchase."
+    redirect_to product_path(@product)
   end
 end
