@@ -22,6 +22,7 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
 gem 'rails-controller-testing'
 gem 'stripe'
+gem 'brakeman'
 
 
 # Use jquery as the JavaScript library
