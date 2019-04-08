@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+var refreshRating = function() {
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -17,6 +17,11 @@ $(document).on('turbolinks:load', function(){
     }
   });
   $('.rated').raty('reload');
+};
+
+$(document).on('turbolinks:load ajaxSuccess', function() {
+  
+  refreshRating();
 
   $('.img-zoom').elevateZoom({
     zoomWindowHeight:400,
