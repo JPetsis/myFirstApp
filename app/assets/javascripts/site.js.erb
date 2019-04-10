@@ -19,7 +19,7 @@ var refreshRating = function() {
   $('.rated').raty('reload');
 };
 
-$(document).on('turbolinks:load ajaxSuccess', function() {
+$(document).on('turbolinks:load ajax:success', function() {
   
   refreshRating();
 
