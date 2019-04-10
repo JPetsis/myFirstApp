@@ -1,12 +1,13 @@
 <h1 id="products">Products</h1>
 
-<div class="container-fluid">
-  <div class="row">
-    <%= render partial: "shared/product", collection: @products %>
+<% cache(cache_key_for_products) do %>
+  <div class="container-fluid">
+    <div class="row">
+      <%= render partial: "shared/product", collection: @products %>
+    </div>
+    <%= will_paginate @products, :class => 'pagination_product' %>
   </div>
-  <%= will_paginate @products, :class => 'pagination_product' %>
-</div>
-
+<% end %>
 
 <br>
 
