@@ -24,7 +24,8 @@ gem 'rails-controller-testing'
 gem 'stripe'
 gem 'brakeman'
 gem 'dalli'
-
+gem 'redis-rails'
+gem 'newrelic_rpm'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
