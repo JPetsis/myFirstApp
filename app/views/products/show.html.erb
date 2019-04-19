@@ -3,28 +3,26 @@
       <div class="col-md-6">
         <%= image_tag(@product.image_url, class: "img-fluid img-zoom", data_zoom_image: @product.image_url) %>
       </div>
-      <% cache @product do %>
-        <div class="col-md-5 show_product_information">
-          <p>
-            <%= @product.name %>
-          </p>
-          <p>
-            <strong>$ <%= @product.price %> </strong>
-          </p>
-          <p>
-            <%= @product.description %>
-          </p>
-          <p>
-          <% if user_signed_in? %>
-            <%= form_with(url: '/payments/create') do |form| %>
-              <%= render partial: "shared/stripe_checkout_button" %>
-              <%= hidden_field_tag(:product_id, @product.id) %>
-            <% end %>
+      <div class="col-md-5 show_product_information">
+        <p>
+          <%= @product.name %>
+        </p>
+        <p>
+          <strong>$ <%= @product.price %> </strong>
+        </p>
+        <p>
+          <%= @product.description %>
+        </p>
+        <p>
+        <% if user_signed_in? %>
+          <%= form_with(url: '/payments/create') do |form| %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
           <% end %>
-          </p>
-          Average Rating: <%= render "average_rating" %>
-        </div> 
-      <% end %>
+        <% end %>
+        </p>
+        Average Rating: <%= render "average_rating" %>
+      </div> 
     </div>
     <div class="row">
       <div class="col-md-3 reviews">
