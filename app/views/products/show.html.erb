@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" data-product-id = "<%= @product.id %>">
       <div class="col-md-6">
         <%= image_tag(@product.image_url, class: "img-fluid img-zoom", data_zoom_image: @product.image_url) %>
       </div>
@@ -28,6 +28,7 @@
     </div>
     <div class="row">
       <div class="col-md-3 reviews">
+        <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
         <%= render "new_comment" %>
         <%= render "comments" %>
         
