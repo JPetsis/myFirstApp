@@ -15,16 +15,6 @@ class ProductsController < ApplicationController
     else
       @products = Product.order('created_at DESC').paginate(:page => params[:page], :per_page => 3)
     end
-
-    $redis.set("foo", "bar")
-    $redis.get("foo")
-    puts $redis.get("foo")
-    $redis.get("baz")
-    puts $redis.get("baz")
-    $redis.del("foo")
-    puts $redis.del("foo")
-    $redis.get("foo")
-    puts $redis.get("foo")
   end
 
   # GET /products/1
